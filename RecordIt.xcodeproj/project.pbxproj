@@ -14,6 +14,7 @@
 		52EB6EF81AA204AA005DA85B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EB6EF71AA204AA005DA85B /* Images.xcassets */; };
 		52EB6EFB1AA204AA005DA85B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EB6EF91AA204AA005DA85B /* LaunchScreen.xib */; };
 		52EB6F071AA204AA005DA85B /* RecordItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EB6F061AA204AA005DA85B /* RecordItTests.swift */; };
+		52EB6F111AA2050A005DA85B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EB6F101AA2050A005DA85B /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		52EB6F001AA204AA005DA85B /* RecordItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecordItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EB6F051AA204AA005DA85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52EB6F061AA204AA005DA85B /* RecordItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordItTests.swift; sourceTree = "<group>"; };
+		52EB6F101AA2050A005DA85B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EB6F111AA2050A005DA85B /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +64,7 @@
 		52EB6EDF1AA204AA005DA85B = {
 			isa = PBXGroup;
 			children = (
+				52EB6F101AA2050A005DA85B /* AVFoundation.framework */,
 				52EB6EEA1AA204AA005DA85B /* RecordIt */,
 				52EB6F031AA204AA005DA85B /* RecordItTests */,
 				52EB6EE91AA204AA005DA85B /* Products */,
@@ -164,9 +168,11 @@
 				TargetAttributes = {
 					52EB6EE71AA204AA005DA85B = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 7M8NZ564F4;
 					};
 					52EB6EFF1AA204AA005DA85B = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 7M8NZ564F4;
 						TestTargetID = 52EB6EE71AA204AA005DA85B;
 					};
 				};
@@ -362,6 +368,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -373,6 +381,7 @@
 				INFOPLIST_FILE = RecordItTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecordIt.app/RecordIt";
 			};
 			name = Debug;
@@ -381,6 +390,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -388,6 +399,7 @@
 				INFOPLIST_FILE = RecordItTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecordIt.app/RecordIt";
 			};
 			name = Release;
